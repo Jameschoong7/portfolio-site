@@ -17,7 +17,20 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title:{ template:"%s | James Choong", default:"James Choong"},
   description: "Computer Science student at UOW Malaysia KDU Penang. Building backend systems and AI-powered tools.",
-  
+  openGraph:{
+    title:"James Choong — Portfolio",
+    description: "Computer Science student at KDU Penang. Building backend systems and AI-powered tools.",
+    url: "https://choongjuncheng.my",
+    siteName: "James Choong",
+     images: [
+      {
+        url: "/choongjuncheng.my.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
