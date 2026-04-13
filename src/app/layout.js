@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "James Choong",
      images: [
       {
-        url: "/choongjuncheng.my.png",
+        url: "/og_choongjuncheng.my.png",
         width: 1200,
         height: 630,
       },
