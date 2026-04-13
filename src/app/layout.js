@@ -30,6 +30,9 @@ export const metadata = {
       },
     ],
     type: "website",
+  },
+  verification:{
+    google:"KQsGbwGmluflWWz52cKpUZYgrJGMicKNylTBhZ-sGaY"
   }
 };
 
