@@ -1,3 +1,5 @@
+export const metadata = {title:"Contact"}
+
 export default function Contact(){
     return(
         <main className="max-w-3xl mx-auto px-6 py-16">

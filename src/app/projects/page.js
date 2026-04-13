@@ -1,5 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
-
+export const metadata = {title:"Projects"}
 const projects = [
     
     {

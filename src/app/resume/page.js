@@ -1,3 +1,4 @@
+export const metadata = {title:"Resume"}
 export default function Resume(){
     return(
         <main className="max-w-3xl mx-auto px-6 py-16">
