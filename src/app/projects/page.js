@@ -20,7 +20,20 @@ const projects = [
         tags:["PHP", "MySQL","Full Stack"],
         github: "https://github.com/Jameschoong7/weiicafe",
     },
+    {
+        title: "Job Tracker",
+        description: "A personal job application tracker to manage applications, deadlines, and follow-up status in one place.",
+        tags: ["Full Stack", "Personal Tool", "Productivity"],
+        github: null,
+    },
+    {
+        title: "Daily News Bot",
+        description: "A bot that fetches, summarises, and delivers daily news relevant to my interests — built as a personal productivity tool and AI pipeline exercise.",
+        tags: ["AI", "Automation", "Personal Tool"],
+        github: null,
+    },
     
+
 
 ]
 
