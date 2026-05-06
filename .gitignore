@@ -44,5 +44,8 @@ next-env.d.ts
 # draft for portfolio site
 portfolio_content.md
 
-#claude.md instructions
+#instructions
 CLAUDE.md
+AGENTS.md
+PROJECT_MEMORY.md
+PLANS.md

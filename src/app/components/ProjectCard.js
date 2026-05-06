@@ -1,4 +1,6 @@
-export default function ProjectCard({title, description, tags, github}){
+import Link from "next/link";
+
+export default function ProjectCard({title, description, tags, github,slug}){
     return(
         <div className="border rounded-xl p-6 flex flex-col gap-3 hover:shadow-md transition-shadow">
             <h2 className="text-lg font-semibold">{title}</h2>
@@ -12,13 +14,18 @@ export default function ProjectCard({title, description, tags, github}){
                 ))}
             </div>
 
-            {github &&(
+            <div className="flex gap-4 text-sm font-medium">
+                <Link href={`/projects/${slug}`} className="underline">
+                    View Details
+                </Link>
+                {github &&(
                 <a href={github} target="_blank" rel="noopener noreferrer" className="text-sm font-medium underline">
                     GitHub →
                 </a>
             )}
-
+            </div>
         </div>
+        
     )
 
 
