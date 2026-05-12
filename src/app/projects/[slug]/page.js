@@ -1,5 +1,6 @@
 import {projects} from "../../data/projects";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export function generateStaticParams(){
     return projects.map((project)=>({
@@ -47,6 +48,32 @@ export default async function ProjectDetail({params}){
                     <p className="text-gray-600">{project.whatIBuilt}</p>
                 </section>
             )}
+
+            {project.screenshots?.length > 0 && (
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold mb-3">Screenshots</h2>
+
+                <div className="grid gap-6">
+                  {project.screenshots.map((screenshot) => (
+                    <figure key={screenshot.src} >
+                      <Image
+                        src={screenshot.src}
+                        alt={screenshot.alt}
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-xl border"/>
+
+                        {screenshot.caption && (
+                          <figcaption className="text-sm text-gray-500 mt-2">
+                            {screenshot.caption}
+                          </figcaption>
+                        )}
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {project.techStack?.length > 0 && (
           <section className="mt-10">
             <h2 className="text-xl font-semibold mb-3">Tech Stack</h2>
