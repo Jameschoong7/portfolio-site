@@ -48,6 +48,12 @@ export default function About(){
                     <p className="text-gray-500 text-sm">UOW Malaysia KDU Penang University College | 2022-2024</p>
                     <p className="text-gray-500 text-sm mt-1">CGPA: 3.86</p>
                 </div>
+
+                <div className="border-l-4 border-black pl-4">
+                    <h3 className="font-semibold">SPM 2021</h3>
+                    <p className="text-gray-500 text-sm">SMJK Heng Ee | 2017-2022</p>
+                    <p className="text-gray-500 text-sm mt-1">9A 1B</p>
+                </div>
             </div>
 
             {/*Experience */}
