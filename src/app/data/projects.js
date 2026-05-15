@@ -103,7 +103,61 @@ export const projects = [
         title: "Daily News Bot",
         description: "A bot that fetches, summarises, and delivers daily news relevant to my interests — built as a personal productivity tool and AI pipeline exercise.",
         tags: ["AI", "Automation", "Personal Tool"],
-        github: null,
+        github: "https://github.com/Jameschoong7/daily-news-bot",
+        problem:
+            "Reading the news across multiple sources takes time, and it is easy to miss updates that are actually relevant. I wanted a lightweight way to collect useful technology and local news, rank it against my interests, and turn it into a concise daily digest.",
+
+        whatIBuilt:
+            "A Python automation pipeline that loads RSS sources and a personal YAML profile, fetches recent articles, filters invalid entries, scores relevance, deduplicates repeated stories, selects the top articles, optionally summarizes them with Gemini, saves run logs into SQLite, and sends the final digest to Telegram.",
+
+        techStack: [
+            "Python",
+            "RSS feeds",
+            "feedparser",
+            "YAML",
+            ".env",
+            "SQLite",
+            "Gemini",
+            "google-genai",
+            "Telegram Bot API",
+            "APScheduler",
+            "Pytest",
+            "Black",
+        ],
+
+        decisions: [
+            "Used RSS instead of scraping websites directly because RSS is structured, stable, low-cost, and easier to test.",
+            "Used SQLite because the project is single-user, low-volume, and benefits from simple local persistence.",
+            "Kept Gemini optional so the bot can still produce a digest using RSS summaries if the API key is missing or summarization fails.",
+            "Built a swappable AI provider interface instead of hardcoding the project tightly to Gemini.",
+            "Summarized only selected top articles to reduce API cost and keep the digest focused.",
+            "Stored rejected, kept, and selected article outcomes so each run is traceable.",
+            "Used Telegram delivery instead of building a dashboard because the goal is daily delivery, not UI complexity.",
+            "Added message splitting to handle Telegram message length limits.",
+        ],
+
+        learnings: [
+            "RSS data is cleaner than scraping, but still inconsistent enough to require validation and fallback handling.",
+            "Repeated RSS articles require idempotent persistence so scheduled jobs do not keep duplicating old stories.",
+            "Simple keyword matching can create false positives, such as short terms matching inside unrelated words.",
+            "LLMs do not always return clean structured output, so AI responses need defensive parsing.",
+            "External APIs fail in practical ways, including malformed AI output, missing credentials, network errors, and Telegram length limits.",
+            "Unit tests should use fake providers and clients instead of live APIs.",
+            "Optional integrations make automation more reliable because external services become enhancements rather than single points of failure.",
+        ],
+
+        status: "Working MVP",
+        timeline: "Locally verified; deployment planned with VPS plus cron or systemd",
+
+        screenshots: [
+            {
+                src: "/projects/daily-news-bot/telegram-digest.png",
+                alt: "Daily News Bot Telegram digest",
+                caption: "Telegram digest generated from ranked RSS articles.",
+                variant: "phone",
+            },
+        ]
+
     },
 
 
