@@ -36,6 +36,36 @@ export const projects = [
         description: "A blockchain-based recycling and donation platform deployed on Sepolia testnet, built during the DevMatch 2025 hackathon.",
         tags: ["Blockchain", "Hackathon", "Solidity"],
         github: "https://github.com/Jameschoong7/DevMatch2025",
+        problem:
+            "Recycling incentives and charitable donations often lack transparency. GreenChain explores how a recycling action can be recorded as a token reward, converted into donation credit, and traced through a donation flow.",
+        whatIBuilt:
+            "I built the blockchain and backend integration for a recycle-and-donate prototype. The Solidity contract manages token claiming, donation credit conversion, approved NGO checks, and donation events, while the Flask backend validates QR codes, connects to the contract through Web3.py, and exposes API routes for claiming tokens, converting credits, donating, checking balances, and viewing transparency data.",
+        techStack: [
+            "Solidity",
+            "Remix IDE",
+            "Sepolia testnet",
+            "Flask",
+            "Web3.py",
+            "Infura",
+            "MetaMask",
+            "ABI",
+        ],
+        decisions: [
+            "Used Remix for contract deployment because it was fast and practical for a hackathon Solidity workflow.",
+            "Stored the deployed contract address and ABI separately so the Flask backend could interact with the Sepolia contract without hardcoding contract logic into Python.",
+            "Used Infura as the RPC provider so the backend could communicate with Sepolia without running an Ethereum node locally.",
+            "Added QR code validation before token claiming so the backend could reject invalid claim attempts before calling blockchain-related logic.",
+            "Kept transaction history and some balances demo-oriented because the project was built under hackathon time constraints.",
+        ],
+        learnings: [
+            "Learned how a smart contract can act like a decentralized backend class that stores core application rules.",
+            "Learned how Remix deployment, contract address, ABI, and Web3.py connect together in a working blockchain app.",
+            "Practised connecting a Flask backend to Sepolia through an RPC provider.",
+            "Understood the difference between logic that belongs on-chain, such as token and donation rules, and logic that can stay in the backend, such as QR validation and API routing.",
+            "Learned the tradeoff between building a complete hackathon demo and building a production-grade blockchain system.",
+        ],
+        status: "Completed",
+        timeline: "Built during DevMatch 2025",
     },
     {
         slug: "weii-cafe-restaurant-website",
