@@ -7,10 +7,10 @@ export default function Resume(){
                 Here's my current resume. Kept updated as I complete new projects and milestones.
             </p>
 
-            <a href="/resume.pdf" download className="inline-block mb-8 px-6 py-3 bg-black text-white rounded-full hover:br-gray-800">
+            <a href="/ChoongJunCheng_Resume.pdf" download className="inline-block mb-8 px-6 py-3 bg-black text-white rounded-full hover:br-gray-800">
             Download PDF</a>
 
-            <iframe src="/resume.pdf" className="w-full border rounded-xl" height="800px" title="Resume Preview"/>
+            <iframe src="/ChoongJunCheng_Resume.pdf" className="w-full border rounded-xl" height="800px" title="Resume Preview"/>
         </main>
     )
 }

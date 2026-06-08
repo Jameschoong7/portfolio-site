@@ -21,7 +21,7 @@ export default function Home(){
         <Link href="/projects" className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800">
         View My Projects
         </Link>
-        <a href="/resume.pdf" download className="px-6 py-3 border border-black rounded-full hover:bg-gray-100">
+        <a href="/ChoongJunCheng_Resume.pdf" download className="px-6 py-3 border border-black rounded-full hover:bg-gray-100">
           Download Resume
         </a>
 
