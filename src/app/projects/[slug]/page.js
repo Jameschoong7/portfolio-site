@@ -1,6 +1,7 @@
 import { projects } from "../../data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -39,25 +40,38 @@ export default async function ProjectDetail({ params }) {
   }
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-sm text-gray-500 mb-4">Project Detail</p>
-      <h1 className="text-3xl font-bold">{project.title}</h1>
-      <p className="text-gray-600 mt-4">{project.description}</p>
+      <Link href="/projects" className="text-sm text-gray-500 underline hover:text-gray-800">
+        Back to Projects
+      </Link>
 
-      <div className="flex flex-wrap gap-2 mt-6">
-        {project.tags.map((tag) => (
-          <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-            {tag}
-          </span>
-        ))}
-      </div>
+      <header className="mt-8 border-b pb-10">
+        <p className="text-sm text-gray-500 mb-4">Project Detail</p>
+        <h1 className="text-3xl font-bold">{project.title}</h1>
+        <p className="text-gray-600 mt-4 text-lg leading-8">{project.description}</p>
 
-      {(project.status || project.timeline) && (
-        <p className="text-sm text-gray-500 mt-6">
-          {project.status}
-          {project.status && project.timeline ? " | " : ""}
-          {project.timeline}
-        </p>
-      )}
+        <div className="flex flex-wrap gap-2 mt-6">
+          {project.tags.map((tag) => (
+            <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {(project.status || project.timeline) && (
+          <div className="flex flex-wrap gap-2 mt-6 text-sm">
+            {project.status && (
+              <span className="rounded-full border px-3 py-1 text-gray-700">
+                {project.status}
+              </span>
+            )}
+            {project.timeline && (
+              <span className="rounded-full border px-3 py-1 text-gray-700">
+                {project.timeline}
+              </span>
+            )}
+          </div>
+        )}
+      </header>
 
       {project.problem && (
         <section className="mt-12">
@@ -141,7 +155,7 @@ export default async function ProjectDetail({ params }) {
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-12 text-sm font-medium underline"
+          className="inline-block mt-12 rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-800"
         >
           View GitHub
         </a>
