@@ -39,7 +39,7 @@ export default function About(){
                     <h3 className="font-semibold">Bachelor of Computer Science</h3>
                     <p className="text-gray-500 text-sm">UOW Malaysia KDU Penang University College | 2024 - Present
                     </p>
-                    <p className="text-gray-600 text-sm mt-1">CGPA: 3.71 · High Achievers Scholarship · Dean's List
+                    <p className="text-gray-600 text-sm mt-1">CGPA: 3.76 · High Achievers Scholarship · Dean's List
                     </p>
                 </div>
 

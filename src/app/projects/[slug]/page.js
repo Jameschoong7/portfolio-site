@@ -59,11 +59,13 @@ export default async function ProjectDetail({ params }) {
                 <Image
                   src={screenshot.src}
                   alt={screenshot.alt}
-                  width={screenshot.variant === "phone" ? 390 : 1200}
-                  height={screenshot.variant === "phone" ? 844 : 675}
+                  width={screenshot.width ?? (screenshot.variant === "phone" ? 390 : 1200)}
+                  height={screenshot.height ?? (screenshot.variant === "phone" ? 844 : 675)}
                   className={
                     screenshot.variant === "phone"
                       ? "mx-auto h-auto max-h-[520px] w-auto max-w-full rounded-xl border object-contain"
+                      : screenshot.variant === "compact"
+                        ? "mx-auto h-auto max-h-[620px] w-auto max-w-full rounded-xl border object-contain"
                       : "w-full rounded-xl border"
                   } />
 

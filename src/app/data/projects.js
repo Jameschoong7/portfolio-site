@@ -43,6 +43,108 @@ export const projects = [
         description: "A PHP-based restaurant website with full admin panel for menu management, built with my class mates as our Diploma Final Year Project",
         tags: ["PHP", "MySQL", "Full Stack"],
         github: "https://github.com/Jameschoong7/weiicafe",
+        problem:
+            "The project focused on building a restaurant website that could show menu and business information to customers, support food search and ordering, and give staff an admin panel to manage core website and restaurant data.",
+
+        whatIBuilt:
+            "I was responsible for the admin panel and key customer ordering features, including admin login, dashboard summaries, admin account management, category management, menu item management, order management, food search, menu listing, and cart-based food ordering. The system used PHP, MySQL, sessions, and database queries to support CRUD workflows, admin-only access, and customer order flows.",
+
+        techStack: [
+            "PHP",
+            "MySQL",
+            "PDO",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "JavaScript",
+            "XAMPP",
+        ],
+
+        decisions: [
+            "Built a separate admin panel so restaurant staff could manage core website and restaurant data without editing the database manually.",
+            "Used session-based login checks to protect admin-only pages.",
+            "Used database-driven tables to display categories, menu items, orders, and admin records.",
+            "Connected the customer menu and search pages to database-backed food records so active menu items could be displayed and ordered.",
+            "Included dashboard summary cards so admins could quickly see category, item, order, and revenue counts.",
+        ],
+
+        learnings: [
+            "Learned how PHP pages connect form submissions, sessions, database queries, and rendered HTML.",
+            "Practised CRUD workflows for menu items, categories, admin accounts, and order management.",
+            "Built customer-facing food search and order flows that connect menu selection, quantity input, cart records, and order data.",
+            "Understood how an admin panel differs from a customer-facing website because it focuses on operations and data management.",
+            "Learned the limitations of an older diploma project compared with newer projects that use cleaner architecture and stronger security patterns.",
+        ],
+
+        screenshots: [
+            {
+                src: "/projects/weii-cafe/main-menu.png",
+                alt: "WEii Cafe customer menu page showing food items and ordering entry points",
+                caption: "Customer-facing menu page with database-backed food listings.",
+                width: 508,
+                height: 750,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-login.png",
+                alt: "WEii Cafe admin login page",
+                caption: "Admin login screen for protected back-office access.",
+                width: 405,
+                height: 211,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-view-item.png",
+                alt: "WEii Cafe admin item management table",
+                caption: "Admin item management table for viewing menu records.",
+                width: 422,
+                height: 230,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-add-item.png",
+                alt: "WEii Cafe admin form for adding a menu item",
+                caption: "Menu item form for adding food records and item details.",
+                width: 435,
+                height: 219,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-manage-category.png",
+                alt: "WEii Cafe admin category management table",
+                caption: "Category management table for organising menu sections.",
+                width: 445,
+                height: 235,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-view-customer-order.png",
+                alt: "WEii Cafe admin order management page",
+                caption: "Order management view for tracking customer orders.",
+                width: 480,
+                height: 126,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-update-order-status.png",
+                alt: "WEii Cafe admin form for updating an order status",
+                caption: "Order status update flow for restaurant operations.",
+                width: 475,
+                height: 180,
+                variant: "compact",
+            },
+            {
+                src: "/projects/weii-cafe/admin-manage-admin.png",
+                alt: "WEii Cafe admin account management table",
+                caption: "Admin account management for maintaining back-office users.",
+                width: 444,
+                height: 184,
+                variant: "compact",
+            },
+        ],
+
+        status: "Completed",
+        timeline: "Diploma Final Year Project",
     },
     {
         slug: "job-tracker",

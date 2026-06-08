@@ -26,6 +26,14 @@ export default function Contact(){
                         </a>
                     </p>
                 </div>
+                <div>
+                    <span className="text-sm text-gray-500">LinkedIn</span>
+                    <p>
+                        <a href="https://www.linkedin.com/in/choong-jun-cheng-4a6b161a6/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
+                        Choong Jun Cheng
+                        </a>
+                    </p>
+                </div>
 
                 <div>
                     <span className="text-sm text-gray-500">Location</span>
