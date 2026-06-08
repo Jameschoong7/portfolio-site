@@ -8,6 +8,29 @@ export function generateStaticParams() {
   }))
 }
 
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = projects.find((project) => project.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} | James Choong`,
+      description: project.description,
+      url: `/projects/${project.slug}`,
+    },
+  };
+}
+
+
 export default async function ProjectDetail({ params }) {
   const { slug } = await params;
   const project = projects.find((project) => project.slug === slug);

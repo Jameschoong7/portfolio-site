@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://choongjuncheng.my"),
   title:{ template:"%s | James Choong", default:"James Choong"},
   description: "Computer Science student at UOW Malaysia KDU Penang. Building backend systems and AI-powered tools.",
   openGraph:{
