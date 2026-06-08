@@ -1,24 +1,24 @@
-export default function sitemap(){
+import { projects } from "./data/projects";
+
+const baseUrl = "https://choongjuncheng.my";
+
+export default function sitemap() {
+    const staticRoutes = [
+        "",
+        "/about",
+        "/projects",
+        "/resume",
+        "/contact",
+    ];
+
     return [
-        {
-            url:"https://choongjuncheng.my",
-            lastModified: new Date(),
-        },
-        {
-            url:"https://choongjuncheng.my/about",
-            lastModified: new Date(),
-        },
-        {
-            url:"https://choongjuncheng.my/projects",
-            lastModified: new Date(),
-        },
-        {
-            url:"https://choongjuncheng.my/resume",
-            lastModified: new Date(),
-        },
-        {
-            url:"https://choongjuncheng.my/contact",
-            lastModified: new Date(),
-        },
-    ]
+        ...staticRoutes.map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        })),
+        ...projects.map((project) => ({
+        url: `${baseUrl}/projects/${project.slug}`,
+        lastModified: new Date(),
+        })),
+    ];
 }
