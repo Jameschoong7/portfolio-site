@@ -16,14 +16,16 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://choongjuncheng.my"),
-  title:{ template:"%s | James Choong", default:"James Choong"},
-  description: "Computer Science student at UOW Malaysia KDU Penang. Building backend systems and AI-powered tools.",
-  openGraph:{
-    title:"James Choong — Portfolio",
-    description: "Computer Science student at KDU Penang. Building backend systems and AI-powered tools.",
+  title: { template: "%s | James Choong", default: "James Choong" },
+  description:
+    "Computer Science student at UOW Malaysia KDU Penang building backend systems, AI-powered tools, and full-stack projects for internship opportunities.",
+  openGraph: {
+    title: "James Choong | Backend & AI Portfolio",
+    description:
+      "Computer Science student at UOW Malaysia KDU Penang building backend systems, AI-powered tools, and full-stack projects for internship opportunities.",
     url: "https://choongjuncheng.my",
     siteName: "James Choong",
-     images: [
+    images: [
       {
         url: "/og_choongjuncheng.my.png",
         width: 1200,
@@ -31,9 +33,10 @@ export const metadata = {
       },
     ],
     type: "website",
+
   },
-  verification:{
-    google:"KQsGbwGmluflWWz52cKpUZYgrJGMicKNylTBhZ-sGaY"
+  verification: {
+    google: "KQsGbwGmluflWWz52cKpUZYgrJGMicKNylTBhZ-sGaY"
   }
 };
 
@@ -44,10 +47,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
