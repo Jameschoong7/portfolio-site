@@ -217,14 +217,29 @@ export const projects = [
         ],
         screenshots: [
             {
-                src: "/projects/job-tracker/dashboard.png",
-                alt: "Job Tracker dashboard showing application statuses and summary counts",
-                caption: "Main interface",
+                src: "/projects/job-tracker/dashboard.jpeg",
+                alt: "Job Tracker dashboard showing application metrics and recent activity",
+                caption: "Dashboard overview with application metrics.",
             },
             {
                 src: "/projects/job-tracker/application-form.png",
                 alt: "Job Tracker form for adding or editing a job application",
-                caption: "Form for adding application"
+                caption: "Application form for adding or editing job applications.",
+            },
+            {
+                src: "/projects/job-tracker/boardview.jpeg",
+                alt: "Job Tracker board view grouping applications by status",
+                caption: "Board view grouped by application status.",
+            },
+            {
+                src: "/projects/job-tracker/follow-up.jpeg",
+                alt: "Job Tracker follow-up command center showing overdue and upcoming follow-ups",
+                caption: "Follow-up command center for tracking next actions.",
+            },
+            {
+                src: "/projects/job-tracker/application-detail.jpeg",
+                alt: "Job Tracker application detail page showing notes and follow-up information",
+                caption: "Application detail page with notes and follow-up tracking.",
             },
         ],
         status: "Completed locally",
