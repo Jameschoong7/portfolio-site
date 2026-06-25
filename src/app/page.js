@@ -30,7 +30,7 @@ export default function Home(){
       {/* Quick Intro Strip */}
       <div className="flex flex-col sm:flex-row gap-6 text-sm text-gray-500">
         <span>📍 Based in Penang, Malaysia</span>
-        <span>🎓 CGPA 3.71 — High Achievers Scholarship</span>
+        <span>🎓 CGPA 3.76 — High Achievers Scholarship</span>
         <span>💼 Open to internships from Sep 2026</span>
 
       </div>
